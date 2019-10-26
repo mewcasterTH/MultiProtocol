@@ -1,0 +1,7 @@
+---
+name: MultiProtocol
+main: ItzLightyHD\Main
+api: [3.8.8, 3.9.0]
+depend: ["OrbitCore"]
+version: 1.0
+...
