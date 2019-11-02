@@ -28,15 +28,6 @@ class Main extends PluginBase implements Listener {
 		}
     }
 
-		public function checkDepends() {
-			$this->oc = $this->getServer()->getPluginManager()->getPlugin("OrbitCore");
-			if(is_null($this->oc)){
-					$this->getLogger()->error("OrbitCore is absolutely needed to run this plugin.");
-          $this->getLogger()->error("Download it here: https://poggit.pmmp.io/ci/ItzLightyHD/OrbitCore/OrbitCore");
-					$this->getPluginLoader()->disablePlugin($this);
-			}
-		}
-
     public function onDataPacketRecieve (DataPacketReceiveEvent $ev) {
     	$pk = $ev->getPacket();
     	if ($pk instanceof LoginPacket) {
